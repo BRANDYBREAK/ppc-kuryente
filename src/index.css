@@ -1,0 +1,18 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+
+.leaflet-container {
+  background-color: #f1f5f9 !important;
+  font-family: inherit;
+}
+
+.leaflet-interactive:focus {
+  outline: none;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+.map-dark-tiles .leaflet-tile-pane {
+  filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
+}
